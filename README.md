@@ -14,6 +14,7 @@ _Use GitHub Actions to publish your project to a Docker image._
 </header>
 
 <!--
+
   <<< Author notes: Step 1 >>>
   Choose 3-5 steps for your course.
   The first step is always the hardest, so pick something easy!
@@ -82,6 +83,27 @@ We'll start by creating the workflow file to publish a Docker image to GitHub Pa
 1. Make sure that the image name is unique.
 1. Commit your changes.
 1. (optional) Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:cd`.
+=======
+  <<< Author notes: Step 2 >>>
+  Start this step by acknowledging the previous step.
+  Define terms and link to docs.github.com.
+-->
+
+## Step 2: Add a Dockerfile
+
+_You created a publishing workflow! :tada:_
+
+We will add a `Dockerfile` to the `cd` branch. The `Dockerfile` contains a set of instructions that get stored in a `Docker Image`. If you'd like, you can [learn more about Dockerfiles](https://docs.docker.com/engine/reference/builder/).
+
+### :keyboard: Activity: Add a Dockerfile
+
+1. In the `cd` branch, create `Dockerfile` at the project root and include:
+   ```dockerfile
+   FROM nginx:1.24-alpine
+   COPY . /usr/share/nginx/html
+   ```
+1. Commit your changes.
+
 1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
 
 <footer>
